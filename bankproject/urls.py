@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from bank import views as bank_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('banks/', bank_views.BankListView.as_view(), name='bank-list'),
+    path('branch/<str:ifsc>/', bank_views.BranchDetailView.as_view(), name='branch-detail'),
 ]
