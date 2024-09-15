@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
+from graphene_django.views import GraphQLView
 
 from bank import views as bank_views
+from bank.schema import schema
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('banks/', bank_views.BankListView.as_view(), name='bank-list'),
     path('branch/<str:ifsc>/', bank_views.BranchDetailView.as_view(), name='branch-detail'),
+    path('gql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
 ]
