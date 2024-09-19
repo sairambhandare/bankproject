@@ -1,4 +1,4 @@
-# Bank Branch API (Django REST Framework)
+# Bank Branch API
 
 This project is a RESTful API service built using Django and Django REST Framework for retrieving bank and branch information. It allows users to fetch a list of banks and details of a specific branch based on the branch's IFSC code.
 
@@ -110,3 +110,5 @@ The API will now be available at `http://127.0.0.1:8000/`.
     "state": "UTTAR PRADESH"
   }
   ```
+  
+**NOTE:** Also added the GraphQL endpoint at `{host}/gql/`.
