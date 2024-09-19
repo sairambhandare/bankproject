@@ -15,6 +15,8 @@ This project is a RESTful API service built using Django and Django REST Framewo
 - **GET /banks/** - Returns the list of all banks.
 - **GET /branch/{ifsc}/** - Returns the branch details for a specific IFSC code.
 
+**NOTE:** Also added the GraphQL endpoint at `{host}/gql/`.
+
 ---
 
 ## Project Setup
@@ -111,4 +113,3 @@ The API will now be available at `http://127.0.0.1:8000/`.
   }
   ```
   
-**NOTE:** Also added the GraphQL endpoint at `{host}/gql/`.
